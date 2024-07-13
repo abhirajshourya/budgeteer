@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 import data from '@/assets/mockdata.json';
 import { Link } from 'expo-router';
+import TransactionCard from '@/components/TransactionCard';
 
 export default function TabTwoScreen() {
   const totalTransactions = data.transactions.length;
@@ -33,25 +34,10 @@ export default function TabTwoScreen() {
       </View>
       <View style={styles.divider} />
       <Text style={styles.spendTitle}>High Spending</Text>
-      <Link
-        href={{
-          pathname: '/details/[id]',
-          params: { id: highSpending.id },
-        }}
-      >
-        <View style={styles.spendItem}>
-          <Text style={styles.spendStore}>{highSpending.store_name}</Text>
-          <Text style={styles.spendAmount}>${highSpending.amount}</Text>
-        </View>
-      </Link>
+      <TransactionCard id={highSpending.id} transaction={highSpending} />
       <View style={styles.divider} />
       <Text style={styles.spendTitle}>Low Spending</Text>
-      <Link href={{ pathname: '/details/[id]', params: { id: lowSpending.id } }}>
-        <View style={styles.spendItem}>
-          <Text style={styles.spendStore}>{lowSpending.store_name}</Text>
-          <Text style={styles.spendAmount}>${lowSpending.amount}</Text>
-        </View>
-      </Link>
+      <TransactionCard id={lowSpending.id} transaction={lowSpending} />
       <View style={styles.divider} />
     </View>
   );
@@ -84,33 +70,8 @@ const styles = StyleSheet.create({
     color: '#333',
   },
   spendTitle: {
-    fontSize: 22,
+    fontSize: 20,
     fontWeight: 'bold',
-    marginBottom: 15,
-    color: '#444',
-  },
-  spendItem: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingVertical: 10,
-    paddingHorizontal: 15,
-    width: '100%',
-    backgroundColor: '#fff',
-    borderRadius: 8,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowRadius: 10,
-    shadowOffset: { width: 0, height: 5 },
     marginBottom: 10,
-  },
-  spendStore: {
-    fontSize: 18,
-    color: '#333',
-  },
-  spendAmount: {
-    fontSize: 18,
-    color: '#e53935',
-    fontWeight: 'bold',
   },
 });
