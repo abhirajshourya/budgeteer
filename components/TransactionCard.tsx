@@ -3,18 +3,41 @@ import { Link, useRouter } from 'expo-router';
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
-export default function TransactionCard({ title, price }: { title: string; price: number }) {
+export default function TransactionCard({
+  id,
+  transaction,
+}: {
+  id: number;
+  transaction: {
+    id: number;
+    date: string;
+    amount: number;
+    store_name: string;
+    location: string;
+    category: string;
+  };
+}) {
   return (
     <Link
       href={{
         pathname: '/details/[id]',
-        params: { id: title },
+        params: { id },
       }}
     >
       <View style={styles.card}>
-        <Text style={styles.title}>{title}</Text>
+        <View>
+          <Text style={styles.title}>{transaction.store_name}</Text>
+          <Text
+            style={{
+              fontSize: 12,
+              color: 'gray',
+            }}
+          >
+            {transaction.location}
+          </Text>
+        </View>
         <View style={styles.card_right}>
-          <Text>${price}</Text>
+          <Text>${transaction.amount}</Text>
           <Entypo name="chevron-right" size={24} color="black" />
         </View>
       </View>

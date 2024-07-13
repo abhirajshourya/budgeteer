@@ -1,0 +1,204 @@
+{
+    "transactions": [
+        {
+            "id": 1,
+            "date": "2024-07-01",
+            "amount": 150.25,
+            "store_name": "SuperMart",
+            "location": "North York, ON",
+            "category": "Groceries"
+        },
+        {
+            "id": 2,
+            "date": "2024-07-02",
+            "amount": 75.00,
+            "store_name": "Electric Co.",
+            "location": "Toronto, ON",
+            "category": "Utilities"
+        },
+        {
+            "id": 3,
+            "date": "2024-07-03",
+            "amount": 50.00,
+            "store_name": "Internet Provider",
+            "location": "Ottawa, ON",
+            "category": "Utilities"
+        },
+        {
+            "id": 4,
+            "date": "2024-07-04",
+            "amount": 200.00,
+            "store_name": "Landlord",
+            "location": "Mississauga, ON",
+            "category": "Housing"
+        },
+        {
+            "id": 5,
+            "date": "2024-07-05",
+            "amount": 30.00,
+            "store_name": "Water Utility",
+            "location": "Brampton, ON",
+            "category": "Utilities"
+        },
+        {
+            "id": 6,
+            "date": "2024-07-06",
+            "amount": 40.00,
+            "store_name": "Gas Company",
+            "location": "Hamilton, ON",
+            "category": "Utilities"
+        },
+        {
+            "id": 7,
+            "date": "2024-07-07",
+            "amount": 100.00,
+            "store_name": "Italian Bistro",
+            "location": "London, ON",
+            "category": "Dining"
+        },
+        {
+            "id": 8,
+            "date": "2024-07-08",
+            "amount": 150.00,
+            "store_name": "Fashion Store",
+            "location": "Kitchener, ON",
+            "category": "Clothing"
+        },
+        {
+            "id": 9,
+            "date": "2024-07-09",
+            "amount": 60.00,
+            "store_name": "City Transit",
+            "location": "Windsor, ON",
+            "category": "Transportation"
+        },
+        {
+            "id": 10,
+            "date": "2024-07-10",
+            "amount": 20.00,
+            "store_name": "Coffee Shop",
+            "location": "Markham, ON",
+            "category": "Dining"
+        },
+        {
+            "id": 11,
+            "date": "2024-07-11",
+            "amount": 50.00,
+            "store_name": "Fitness Center",
+            "location": "Vaughan, ON",
+            "category": "Fitness"
+        },
+        {
+            "id": 12,
+            "date": "2024-07-12",
+            "amount": 25.00,
+            "store_name": "Cinema",
+            "location": "Richmond Hill, ON",
+            "category": "Entertainment"
+        },
+        {
+            "id": 13,
+            "date": "2024-07-13",
+            "amount": 80.00,
+            "store_name": "Home Goods Store",
+            "location": "Barrie, ON",
+            "category": "Household"
+        },
+        {
+            "id": 14,
+            "date": "2024-07-14",
+            "amount": 45.00,
+            "store_name": "Laundry Service",
+            "location": "Sudbury, ON",
+            "category": "Services"
+        },
+        {
+            "id": 15,
+            "date": "2024-07-15",
+            "amount": 120.00,
+            "store_name": "Pet Store",
+            "location": "Oshawa, ON",
+            "category": "Pets"
+        },
+        {
+            "id": 16,
+            "date": "2024-07-16",
+            "amount": 70.00,
+            "store_name": "Gourmet Grocery",
+            "location": "Kingston, ON",
+            "category": "Dining"
+        },
+        {
+            "id": 17,
+            "date": "2024-07-17",
+            "amount": 35.00,
+            "store_name": "Garden Center",
+            "location": "Guelph, ON",
+            "category": "Outdoor"
+        },
+        {
+            "id": 18,
+            "date": "2024-07-18",
+            "amount": 55.00,
+            "store_name": "Pharmacy",
+            "location": "Thunder Bay, ON",
+            "category": "Health"
+        },
+        {
+            "id": 19,
+            "date": "2024-07-19",
+            "amount": 300.00,
+            "store_name": "Furniture Store",
+            "location": "Waterloo, ON",
+            "category": "Home"
+        },
+        {
+            "id": 20,
+            "date": "2024-07-20",
+            "amount": 25.00,
+            "store_name": "Bookstore",
+            "location": "Peterborough, ON",
+            "category": "Entertainment"
+        },
+        {
+            "id": 21,
+            "date": "2024-07-21",
+            "amount": 100.00,
+            "store_name": "Hair Salon",
+            "location": "Sarnia, ON",
+            "category": "Personal Care"
+        },
+        {
+            "id": 22,
+            "date": "2024-07-22",
+            "amount": 45.00,
+            "store_name": "Streaming Service",
+            "location": "Online",
+            "category": "Entertainment"
+        },
+        {
+            "id": 23,
+            "date": "2024-07-23",
+            "amount": 60.00,
+            "store_name": "Phone Company",
+            "location": "Online",
+            "category": "Utilities"
+        },
+        {
+            "id": 24,
+            "date": "2024-07-24",
+            "amount": 75.00,
+            "store_name": "Home Repair Service",
+            "location": "Brantford, ON",
+            "category": "Home"
+        },
+        {
+            "id": 25,
+            "date": "2024-07-25",
+            "amount": 50.00,
+            "store_name": "Gift Shop",
+            "location": "Burlington, ON",
+            "category": "Gifts"
+        }
+    ]
+}
