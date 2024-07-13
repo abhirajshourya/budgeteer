@@ -31,6 +31,8 @@ export default function TabLayout() {
         name="summary"
         options={{
           title: 'Summary',
+          headerShown: true,
+          headerTitle: 'Summary',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
               name={focused ? 'information-circle' : 'information-circle-outline'}
