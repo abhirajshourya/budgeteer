@@ -1,7 +1,8 @@
 import { useLocalSearchParams } from 'expo-router';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import data from '@/assets/mockdata.json';
+import TransactionCard from '@/components/TransactionCard';
 
 export default function DetailsScreen() {
   const { id } = useLocalSearchParams();
@@ -13,6 +14,10 @@ export default function DetailsScreen() {
     const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
     return date.toLocaleDateString(undefined, options);
   }
+
+  const similarTransactions = data.transactions.filter(
+    (t) => t.category === transaction?.category && t.id !== transaction?.id
+  );
 
   return (
     <View style={styles.container}>
@@ -35,15 +40,38 @@ export default function DetailsScreen() {
         </Text>
         <Text>{transaction?.location}</Text>
       </View>
-      <Text
+      <View style={styles.bannerSecondary}>
+        <Text
+          style={{
+            padding: 10,
+          }}
+        >
+          {formatDate(transaction?.date!)}
+        </Text>
+        <Text>Category: {transaction?.category}</Text>
+      </View>
+      <ScrollView
         style={{
-          fontSize: 16,
           padding: 10,
-          textAlign: 'right',
         }}
       >
-        Dated: {formatDate(transaction?.date!)}
-      </Text>
+        <View style={styles.divider} />
+        <Text style={styles.spendTitle}>Similar Transactions</Text>
+        {similarTransactions.length === 0 && (
+          <Text
+            style={{
+              padding: 10,
+              fontSize: 16,
+              color: 'gray',
+            }}
+          >
+            No similar transactions found
+          </Text>
+        )}
+        {similarTransactions.map((t) => (
+          <TransactionCard key={t.id} id={t.id} transaction={t} />
+        ))}
+      </ScrollView>
     </View>
   );
 }
@@ -59,5 +87,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 30,
     backgroundColor: '#93e0ff',
+  },
+  bannerSecondary: {
+    display: 'flex',
+    flexDirection: 'column',
+    padding: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#bfecfd',
+  },
+  divider: {
+    height: 1,
+    backgroundColor: '#ddd',
+    marginVertical: 10,
+  },
+  spendTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    padding: 10,
   },
 });

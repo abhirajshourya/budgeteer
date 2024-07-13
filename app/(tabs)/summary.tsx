@@ -1,6 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
 import data from '@/assets/mockdata.json';
-import { Link } from 'expo-router';
 import TransactionCard from '@/components/TransactionCard';
 
 export default function TabTwoScreen() {

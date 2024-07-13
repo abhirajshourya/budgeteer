@@ -3,7 +3,7 @@
         {
             "id": 1,
             "date": "2024-07-01",
-            "amount": 150.25,
+            "amount": 150,
             "store_name": "SuperMart",
             "location": "North York, ON",
             "category": "Groceries"
